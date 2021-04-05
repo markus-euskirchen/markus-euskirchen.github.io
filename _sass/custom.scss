@@ -1,0 +1,33 @@
+.site-header {
+  border-top: none;
+}
+
+.site-title:hover {
+  text-decoration: none;
+}
+
+hr {
+  border-top: none;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.home-posts hr {
+  margin-bottom: 25px;
+}
+
+.home-post-image {
+  display: block;
+  margin: 0px auto 25px;
+  max-width: 740px;
+  max-height: 740px;
+}
+
+.home-post-content {
+  margin-bottom: 25px;
+}
+
+.home-post-meta {
+  font-style: italic;
+  margin-bottom: 25px;
+  text-align: right;
+}
