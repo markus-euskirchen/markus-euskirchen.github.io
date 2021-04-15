@@ -14,10 +14,28 @@ layout: default
       {%- for post in site.posts -%}
         <hr>
         <div class="home-post">
-          {%- if post.image -%}
-            <img class="home-post-image" src="images/{{ post.image }}">
+          <div id="carousel-{{ post.id | remove: '/' }}" class="carousel slide" data-bs-interval="false">
+            <div class="carousel-inner">
+              {%- for image in post.images -%}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                  <img src="images/{{ image }}" class="home-post-image {% if post.images.size > 1 %}home-post-image-carousel{% endif %} d-block">
+                </div>
+              {%- endfor -%}
+              {%- if post.images.size > 1 -%}
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{{ post.id | remove: '/' }}" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-{{ post.id | remove: '/' }}" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              {%- endif -%}
+            </div>
+          </div>
+          {%- if post.content.size > 1 -%}
+            <div class="home-post-content">{{ post.content }}</div>
           {%- endif -%}
-          <div class="home-post-content">{{ post.content }}</div>
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <p class="home-post-meta">{{ post.name }}, {{ post.date | date: date_format }}</p>
         </div>
