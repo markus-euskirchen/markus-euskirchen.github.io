@@ -5,4 +5,4 @@
 layout: home
 ---
 
-Erinnerungen an Markus Euskirchen, gesammelt von Lena, Marei und Lukas für seine Familie und Freunde. Wer ein Bild oder eine Erinnerung an Markus teilen möchte, schreibe bitte an [erinnerungen-markus@posteo.de](mailto:erinnerungen-markus@posteo.de).
+Erinnerungen an Markus Euskirchen, gesammelt von Lena und Hannes für seine Familie und Freunde. Wer ein Bild oder eine Erinnerung an Markus teilen möchte, schreibe bitte an [erinnerungen-markus@posteo.de](mailto:erinnerungen-markus@posteo.de).
